@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ผลงาน | Portfolio</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:rgba(0,0,0,.3);
+    backdrop-filter:blur(10px);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#38bdf8;
+}
+
+.container{
+    width:90%;
+    margin:50px auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.title h1{
+    font-size:42px;
+}
+
+.title p{
+    margin-top:10px;
+    color:#cbd5e1;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+}
+
+.card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h2{
+    margin-bottom:10px;
+}
+
+.card-content p{
+    line-height:1.7;
+    color:#e2e8f0;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 20px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:white;
+    color:#1e40af;
+}
+
+.back{
+    text-align:center;
+    margin-top:40px;
+}
+
+.back a{
+    display:inline-block;
+    padding:14px 35px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    transition:.3s;
+}
+
+.back a:hover{
+    background:white;
+    color:#1e40af;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+    background:#111827;
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+}
+
+nav{
+    margin-top:15px;
+}
+
+nav a{
+    display:inline-block;
+    margin:8px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+My Portfolio
+</div>
+
+<nav>
+
+<a href="index.html">หน้าแรก</a>
+<a href="about.html">ประวัติ</a>
+<a href="portfolio.html">ผลงาน</a>
+<a href="skills.html">ทักษะ</a>
+<a href="contact.html">ติดต่อ</a>
+
+</nav>
+
+</header>
+
+<div class="container">
+
+<div class="title">
+
+<h1>ผลงานของฉัน</h1>
+
+<p>ตัวอย่างผลงานและกิจกรรมที่เคยเข้าร่วม</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="images/work1.jpg" alt="ผลงาน 1">
+
+<div class="card-content">
+
+<h2>เว็บไซต์ Portfolio</h2>
+
+<p>
+สร้างเว็บไซต์ Portfolio ด้วย HTML และ CSS
+เพื่อใช้ในการนำเสนอข้อมูลส่วนตัวและผลงาน
+</p>
+
+<a href="#" class="btn">รายละเอียด</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/work2.jpg" alt="ผลงาน 2">
+
+<div class="card-content">
+
+<h2>โครงงานคอมพิวเตอร์</h2>
+
+<p>
+ออกแบบและพัฒนาโครงงานวิชาคอมพิวเตอร์
+ฝึกการทำงานเป็นทีมและการแก้ปัญหา
+</p>
+
+<a href="#" class="btn">รายละเอียด</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="images/work3.jpg" alt="ผลงาน 3">
+
+<div class="card-content">
+
+<h2>กิจกรรมโรงเรียน</h2>
+
+<p>
+เข้าร่วมกิจกรรมของโรงเรียน เช่น
+การแข่งขันทักษะวิชาการและกิจกรรมจิตอาสา
+</p>
+
+<a href="#" class="btn">รายละเอียด</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="back">
+
+<a href="index.html">← กลับหน้าแรก</a>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 Portfolio | นายวรโชติ เจริญจิตร
+
+</footer>
+
+</body>
+</html>
