@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio | นายวรโชติ เจริญจิตร</title>
+
+    <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,.3);
+backdrop-filter:blur(10px);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero-content img{
+width:220px;
+height:220px;
+border-radius:50%;
+border:6px solid white;
+object-fit:cover;
+box-shadow:0 0 30px cyan;
+animation:float 3s ease-in-out infinite;
+}
+
+.hero-content h1{
+font-size:55px;
+margin-top:20px;
+}
+
+.hero-content h2{
+font-size:30px;
+margin-top:10px;
+color:#7dd3fc;
+}
+
+.hero-content p{
+margin-top:20px;
+font-size:20px;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 40px;
+background:#38bdf8;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-size:20px;
+transition:.4s;
+}
+
+.btn:hover{
+background:white;
+color:#1e40af;
+transform:scale(1.05);
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#111827;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+display:inline-block;
+margin:10px;
+}
+
+.hero-content h1{
+font-size:36px;
+}
+
+.hero-content h2{
+font-size:22px;
+}
+
+.hero-content img{
+width:170px;
+height:170px;
+}
+
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+My Portfolio
+</div>
+
+<nav>
+
+<a href="index.html">หน้าแรก</a>
+
+<a href="about.html">ประวัติ</a>
+
+<a href="portfolio.html">ผลงาน</a>
+
+<a href="skills.html">ทักษะ</a>
+
+<a href="contact.html">ติดต่อ</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<img src="images/profile.jpg" alt="Profile">
+
+<h1>นายวรโชติ เจริญจิตร</h1>
+
+<h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
+
+<p>
+ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของผม
+<br><br>
+เว็บไซต์นี้จัดทำขึ้นเพื่อนำเสนอข้อมูลส่วนตัว
+ผลงาน ความสามารถ และประสบการณ์ในการเรียน
+</p>
+
+<a href="about.html" class="btn">
+เข้าสู่ Portfolio
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Portfolio | นายวรโชติ เจริญจิตร
+
+</footer>
+
+</body>
+</html>
