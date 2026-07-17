@@ -1,160 +1,158 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio | นายวรโชติ เจริญจิตร</title>
+<title>Portfolio | นายวรโชติ เจริญจิตร</title>
 
-    <style>
+<style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
-color:white;
+    background:linear-gradient(135deg,#0f172a,#1d4ed8,#38bdf8);
+    color:white;
 }
 
+/* เมนู */
 header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-position:fixed;
-width:100%;
-top:0;
-background:rgba(0,0,0,.3);
-backdrop-filter:blur(10px);
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    background:rgba(0,0,0,.25);
+    backdrop-filter:blur(10px);
+    z-index:1000;
 }
 
 .logo{
-font-size:28px;
-font-weight:bold;
+    font-size:30px;
+    font-weight:bold;
 }
 
 nav a{
-color:white;
-text-decoration:none;
-margin-left:25px;
-transition:.3s;
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:18px;
+    transition:.3s;
 }
 
 nav a:hover{
-color:#38bdf8;
+    color:#7dd3fc;
 }
 
+/* หน้าแรก */
 .hero{
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
 }
 
-.hero-content img{
-width:220px;
-height:220px;
-border-radius:50%;
-border:6px solid white;
-object-fit:cover;
-box-shadow:0 0 30px cyan;
-animation:float 3s ease-in-out infinite;
+.hero img{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    border:6px solid white;
+    object-fit:cover;
+    box-shadow:0 0 30px #38bdf8;
+    animation:float 3s ease-in-out infinite;
 }
 
-.hero-content h1{
-font-size:55px;
-margin-top:20px;
+.hero h1{
+    margin-top:25px;
+    font-size:50px;
 }
 
-.hero-content h2{
-font-size:30px;
-margin-top:10px;
-color:#7dd3fc;
+.hero h2{
+    color:#dbeafe;
+    margin-top:10px;
 }
 
-.hero-content p{
-margin-top:20px;
-font-size:20px;
+.hero p{
+    margin-top:20px;
+    font-size:20px;
+    line-height:1.8;
+}
+
+/* ปุ่ม */
+.buttons{
+    margin-top:35px;
 }
 
 .btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 40px;
-background:#38bdf8;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-size:20px;
-transition:.4s;
+    display:inline-block;
+    margin:10px;
+    padding:15px 35px;
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    font-size:18px;
+    transition:.3s;
 }
 
 .btn:hover{
-background:white;
-color:#1e40af;
-transform:scale(1.05);
+    background:white;
+    color:#1d4ed8;
+    transform:translateY(-5px);
 }
 
+/* Footer */
 footer{
-text-align:center;
-padding:20px;
-background:#111827;
+    background:#111827;
+    text-align:center;
+    padding:20px;
 }
 
+/* Animation */
 @keyframes float{
-
-0%{
-transform:translateY(0px);
+0%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0);}
 }
 
-50%{
-transform:translateY(-15px);
-}
-
-100%{
-transform:translateY(0px);
-}
-
-}
-
+/* Responsive */
 @media(max-width:768px){
 
 header{
-flex-direction:column;
+    flex-direction:column;
 }
 
 nav{
-margin-top:15px;
+    margin-top:15px;
 }
 
 nav a{
-display:inline-block;
-margin:10px;
+    display:inline-block;
+    margin:8px;
 }
 
-.hero-content h1{
-font-size:36px;
+.hero h1{
+    font-size:36px;
 }
 
-.hero-content h2{
-font-size:22px;
-}
-
-.hero-content img{
-width:170px;
-height:170px;
+.hero img{
+    width:170px;
+    height:170px;
 }
 
 }
 
-    </style>
+</style>
 
 </head>
 
@@ -184,7 +182,7 @@ My Portfolio
 
 <section class="hero">
 
-<div class="hero-content">
+<div>
 
 <img src="images/profile.jpg" alt="Profile">
 
@@ -193,15 +191,21 @@ My Portfolio
 <h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
 
 <p>
-ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของผม
-<br><br>
-เว็บไซต์นี้จัดทำขึ้นเพื่อนำเสนอข้อมูลส่วนตัว
-ผลงาน ความสามารถ และประสบการณ์ในการเรียน
+ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของผม<br>
+เว็บไซต์นี้จัดทำขึ้นเพื่อนำเสนอประวัติส่วนตัว ผลงาน และทักษะต่าง ๆ
 </p>
 
-<a href="about.html" class="btn">
-เข้าสู่ Portfolio
-</a>
+<div class="buttons">
+
+<a href="about.html" class="btn">👤 ประวัติ</a>
+
+<a href="portfolio.html" class="btn">💼 ผลงาน</a>
+
+<a href="skills.html" class="btn">💻 ทักษะ</a>
+
+<a href="contact.html" class="btn">📞 ติดต่อ</a>
+
+</div>
 
 </div>
 
