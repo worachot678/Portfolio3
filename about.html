@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ประวัติส่วนตัว | Portfolio</title>
+<title>About Me | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -11,37 +13,74 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
-color:white;
+background:linear-gradient(135deg,#e8fff2,#d8f3dc,#b7e4c7,#95d5b2);
+min-height:100vh;
+overflow-x:hidden;
+}
+
+.circle{
+position:fixed;
+border-radius:50%;
+background:rgba(255,255,255,.35);
+z-index:-1;
+animation:move 10s infinite alternate;
+}
+
+.c1{
+width:220px;
+height:220px;
+top:-60px;
+left:-60px;
+}
+
+.c2{
+width:170px;
+height:170px;
+bottom:40px;
+right:70px;
+animation-duration:14s;
+}
+
+@keyframes move{
+from{
+transform:translateY(0) translateX(0);
+}
+to{
+transform:translateY(-40px) translateX(30px);
+}
 }
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 10%;
-background:rgba(0,0,0,.3);
-backdrop-filter:blur(10px);
+padding:20px 8%;
+background:rgba(255,255,255,.25);
+backdrop-filter:blur(15px);
+position:sticky;
+top:0;
 }
 
 .logo{
 font-size:28px;
 font-weight:bold;
+color:#2d6a4f;
 }
 
 nav a{
-color:white;
 text-decoration:none;
 margin-left:20px;
+color:#2d6a4f;
+font-weight:500;
 transition:.3s;
 }
 
 nav a:hover{
-color:#38bdf8;
+color:#40916c;
 }
 
 .container{
@@ -52,72 +91,100 @@ padding:60px 20px;
 }
 
 .card{
-max-width:900px;
-width:100%;
-background:rgba(255,255,255,.1);
-backdrop-filter:blur(15px);
+width:900px;
+background:rgba(255,255,255,.35);
+backdrop-filter:blur(18px);
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
 padding:40px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.4);
+display:flex;
+gap:40px;
 }
 
-.profile{
+.left{
 text-align:center;
-margin-bottom:30px;
+width:35%;
 }
 
-.profile img{
-width:180px;
-height:180px;
+.left img{
+width:220px;
+height:220px;
 border-radius:50%;
-border:5px solid white;
 object-fit:cover;
+border:6px solid white;
+box-shadow:0 0 20px #52b788;
 }
 
-.profile h1{
+.left h2{
 margin-top:20px;
-font-size:38px;
+color:#1b4332;
 }
 
-.profile h3{
-color:#7dd3fc;
-margin-top:10px;
+.left p{
+color:#2d6a4f;
+}
+
+.right{
+width:65%;
+}
+
+.right h1{
+color:#1b4332;
+margin-bottom:20px;
 }
 
 .info{
-margin-top:20px;
-line-height:2;
+margin:12px 0;
 font-size:18px;
+color:#344e41;
 }
 
 .info b{
-color:#7dd3fc;
+color:#2d6a4f;
+}
+
+.goal{
+margin-top:25px;
+padding:20px;
+background:rgba(255,255,255,.45);
+border-radius:15px;
+line-height:1.8;
+color:#344e41;
 }
 
 .btn{
 display:inline-block;
-margin-top:35px;
-padding:14px 35px;
-background:#38bdf8;
+margin-top:30px;
+padding:12px 30px;
+background:#52b788;
 color:white;
 text-decoration:none;
-border-radius:50px;
+border-radius:40px;
 transition:.3s;
 }
 
 .btn:hover{
-background:white;
-color:#1e40af;
+background:#2d6a4f;
+transform:translateY(-4px);
 }
 
 footer{
 text-align:center;
 padding:20px;
-background:#111827;
-margin-top:40px;
+color:#2d6a4f;
 }
 
-@media(max-width:768px){
+@media(max-width:900px){
+
+.card{
+flex-direction:column;
+text-align:center;
+}
+
+.left,
+.right{
+width:100%;
+}
 
 header{
 flex-direction:column;
@@ -132,10 +199,6 @@ display:inline-block;
 margin:8px;
 }
 
-.profile h1{
-font-size:30px;
-}
-
 }
 
 </style>
@@ -144,20 +207,21 @@ font-size:30px;
 
 <body>
 
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+
 <header>
 
 <div class="logo">
-My Portfolio
+🌿 My Portfolio
 </div>
 
 <nav>
-
 <a href="index.html">หน้าแรก</a>
 <a href="about.html">ประวัติ</a>
 <a href="portfolio.html">ผลงาน</a>
 <a href="skills.html">ทักษะ</a>
 <a href="contact.html">ติดต่อ</a>
-
 </nav>
 
 </header>
@@ -166,47 +230,50 @@ My Portfolio
 
 <div class="card">
 
-<div class="profile">
+<div class="left">
 
 <img src="images/profile.jpg" alt="Profile">
 
-<h1>นายวรโชติ เจริญจิตร</h1>
+<h2>นายวรโชติ เจริญจิตร</h2>
 
-<h3>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h3>
-
-</div>
-
-<div class="info">
-
-<p><b>ชื่อ-สกุล :</b> นายวรโชติ เจริญจิตร</p>
-
-<p><b>ชื่อเล่น :</b> แชมป์</p>
-
-<p><b>วันเกิด :</b> 22/02/2552</p>
-
-<p><b>อายุ :</b> 17</p>
-
-<p><b>โรงเรียน :</b> พานทอง</p>
-
-<p><b>ระดับชั้น :</b> มัธยมศึกษาปีที่ 6</p>
-
-<p><b>แผนการเรียน :</b> วิทย์-คณิต</p>
-
-<p><b>งานอดิเรก :</b> เล่นกีฬา เล่นเกม ฟังเพลง</p>
-
-<p><b>ความสามารถพิเศษ :</b> ทำได้ทุกอย่าง</p>
-
-<p><b>เป้าหมาย :</b> ศึกษาต่อระดับมหาวิทยาลัยเพื่อสร้างอนาคต</p>
+<p>นักเรียนชั้นมัธยมศึกษาปีที่ 6</p>
 
 </div>
 
-<center>
+<div class="right">
 
-<a href="index.html" class="btn">
-← กลับหน้าแรก
+<h1>ประวัติส่วนตัว</h1>
+
+<div class="info"><b>ชื่อ-สกุล :</b> นายวรโชติ เจริญจิตร</div>
+
+<div class="info"><b>ระดับชั้น :</b> มัธยมศึกษาปีที่ 6</div>
+
+<div class="info"><b>โรงเรียน :</b> (ใส่ชื่อโรงเรียน)</div>
+
+<div class="info"><b>แผนการเรียน :</b> (เช่น วิทย์-คณิต)</div>
+
+<div class="info"><b>งานอดิเรก :</b> เล่นกีฬา ฟังเพลง เล่นเกม ศึกษาเทคโนโลยี</div>
+
+<div class="info"><b>ความสามารถ :</b> HTML, CSS, Microsoft Office, Canva</div>
+
+<div class="goal">
+
+<h3>เป้าหมาย</h3>
+
+<p>
+
+มุ่งมั่นพัฒนาทักษะด้านเทคโนโลยีและการเขียนโปรแกรม
+เพื่อศึกษาต่อในระดับมหาวิทยาลัย และนำความรู้ไปสร้างผลงานที่เป็นประโยชน์ต่อสังคม
+
+</p>
+
+</div>
+
+<a href="portfolio.html" class="btn">
+ดูผลงาน →
 </a>
 
-</center>
+</div>
 
 </div>
 
