@@ -3,160 +3,190 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ผลงาน | Portfolio</title>
+<title>Portfolio | นายวรโชติ เจริญจิตร</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
-    color:white;
+background:linear-gradient(135deg,#e8fff2,#d8f3dc,#b7e4c7,#95d5b2);
+min-height:100vh;
+overflow-x:hidden;
 }
 
+/* วงกลมพื้นหลัง */
+
+.circle{
+position:fixed;
+border-radius:50%;
+background:rgba(255,255,255,.35);
+z-index:-1;
+animation:move 12s infinite alternate;
+}
+
+.c1{
+width:220px;
+height:220px;
+top:-60px;
+left:-60px;
+}
+
+.c2{
+width:170px;
+height:170px;
+bottom:40px;
+right:80px;
+}
+
+@keyframes move{
+from{transform:translateY(0);}
+to{transform:translateY(-40px) translateX(30px);}
+}
+
+/* Header */
+
 header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 10%;
-    background:rgba(0,0,0,.3);
-    backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(255,255,255,.25);
+backdrop-filter:blur(15px);
+position:sticky;
+top:0;
 }
 
 .logo{
-    font-size:28px;
-    font-weight:bold;
+font-size:28px;
+font-weight:bold;
+color:#2d6a4f;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:20px;
-    transition:.3s;
+text-decoration:none;
+margin-left:20px;
+color:#2d6a4f;
+font-weight:500;
+transition:.3s;
 }
 
 nav a:hover{
-    color:#38bdf8;
+color:#40916c;
 }
 
+/* เนื้อหา */
+
 .container{
-    width:90%;
-    margin:50px auto;
+width:90%;
+max-width:1200px;
+margin:50px auto;
 }
 
 .title{
-    text-align:center;
-    margin-bottom:40px;
+text-align:center;
+margin-bottom:40px;
 }
 
 .title h1{
-    font-size:42px;
+font-size:42px;
+color:#1b4332;
 }
 
 .title p{
-    margin-top:10px;
-    color:#cbd5e1;
+color:#344e41;
+margin-top:10px;
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+/* Cards */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
 .card{
-    background:rgba(255,255,255,.1);
-    backdrop-filter:blur(10px);
-    border-radius:20px;
-    overflow:hidden;
-    transition:.4s;
-    box-shadow:0 10px 25px rgba(0,0,0,.3);
+background:rgba(255,255,255,.35);
+backdrop-filter:blur(15px);
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-10px) scale(1.03);
+transform:translateY(-10px);
 }
 
 .card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
+width:100%;
+height:220px;
+object-fit:cover;
 }
 
-.card-content{
-    padding:20px;
+.content{
+padding:20px;
 }
 
-.card-content h2{
-    margin-bottom:10px;
+.content h2{
+color:#1b4332;
+margin-bottom:10px;
 }
 
-.card-content p{
-    line-height:1.7;
-    color:#e2e8f0;
+.content p{
+color:#344e41;
+line-height:1.7;
 }
 
 .btn{
-    display:inline-block;
-    margin-top:15px;
-    padding:10px 20px;
-    background:#38bdf8;
-    color:white;
-    text-decoration:none;
-    border-radius:30px;
-    transition:.3s;
+display:inline-block;
+margin-top:15px;
+padding:10px 25px;
+background:#52b788;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
 }
 
 .btn:hover{
-    background:white;
-    color:#1e40af;
+background:#2d6a4f;
 }
 
-.back{
-    text-align:center;
-    margin-top:40px;
-}
-
-.back a{
-    display:inline-block;
-    padding:14px 35px;
-    background:#38bdf8;
-    color:white;
-    text-decoration:none;
-    border-radius:40px;
-    transition:.3s;
-}
-
-.back a:hover{
-    background:white;
-    color:#1e40af;
-}
+/* Footer */
 
 footer{
-    text-align:center;
-    padding:20px;
-    margin-top:50px;
-    background:#111827;
+text-align:center;
+padding:25px;
+color:#2d6a4f;
+margin-top:40px;
 }
 
 @media(max-width:768px){
 
 header{
-    flex-direction:column;
+flex-direction:column;
 }
 
 nav{
-    margin-top:15px;
+margin-top:15px;
 }
 
 nav a{
-    display:inline-block;
-    margin:8px;
+display:inline-block;
+margin:8px;
+}
+
+.title h1{
+font-size:32px;
 }
 
 }
@@ -167,10 +197,13 @@ nav a{
 
 <body>
 
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+
 <header>
 
 <div class="logo">
-My Portfolio
+🌿 My Portfolio
 </div>
 
 <nav>
@@ -191,26 +224,25 @@ My Portfolio
 
 <h1>ผลงานของฉัน</h1>
 
-<p>ตัวอย่างผลงานและกิจกรรมที่เคยเข้าร่วม</p>
+<p>ตัวอย่างผลงานและกิจกรรมที่ภาคภูมิใจ</p>
 
 </div>
 
-<div class="cards">
+<div class="grid">
 
 <div class="card">
 
-<img src="images/work1.jpg" alt="ผลงาน 1">
+<img src="images/work1.jpg">
 
-<div class="card-content">
+<div class="content">
 
 <h2>เว็บไซต์ Portfolio</h2>
 
 <p>
-สร้างเว็บไซต์ Portfolio ด้วย HTML และ CSS
-เพื่อใช้ในการนำเสนอข้อมูลส่วนตัวและผลงาน
+สร้างเว็บไซต์ Portfolio ด้วย HTML และ CSS เพื่อใช้ในการนำเสนอข้อมูลส่วนตัว
 </p>
 
-<a href="#" class="btn">รายละเอียด</a>
+<a href="#" class="btn">ดูเพิ่มเติม</a>
 
 </div>
 
@@ -218,18 +250,17 @@ My Portfolio
 
 <div class="card">
 
-<img src="images/work2.jpg" alt="ผลงาน 2">
+<img src="images/work2.jpg">
 
-<div class="card-content">
+<div class="content">
 
 <h2>โครงงานคอมพิวเตอร์</h2>
 
 <p>
-ออกแบบและพัฒนาโครงงานวิชาคอมพิวเตอร์
-ฝึกการทำงานเป็นทีมและการแก้ปัญหา
+ออกแบบและพัฒนาโครงงานคอมพิวเตอร์ ฝึกการคิดวิเคราะห์และการทำงานเป็นทีม
 </p>
 
-<a href="#" class="btn">รายละเอียด</a>
+<a href="#" class="btn">ดูเพิ่มเติม</a>
 
 </div>
 
@@ -237,28 +268,39 @@ My Portfolio
 
 <div class="card">
 
-<img src="images/work3.jpg" alt="ผลงาน 3">
+<img src="images/work3.jpg">
 
-<div class="card-content">
+<div class="content">
 
 <h2>กิจกรรมโรงเรียน</h2>
 
 <p>
-เข้าร่วมกิจกรรมของโรงเรียน เช่น
-การแข่งขันทักษะวิชาการและกิจกรรมจิตอาสา
+เข้าร่วมกิจกรรมของโรงเรียนและกิจกรรมจิตอาสา เพื่อพัฒนาทักษะการทำงานร่วมกับผู้อื่น
 </p>
 
-<a href="#" class="btn">รายละเอียด</a>
+<a href="#" class="btn">ดูเพิ่มเติม</a>
 
 </div>
 
 </div>
 
+<div class="card">
+
+<img src="images/work4.jpg">
+
+<div class="content">
+
+<h2>การออกแบบ</h2>
+
+<p>
+ออกแบบโปสเตอร์ อินโฟกราฟิก และงานนำเสนอด้วย Canva และ PowerPoint
+</p>
+
+<a href="#" class="btn">ดูเพิ่มเติม</a>
+
 </div>
 
-<div class="back">
-
-<a href="index.html">← กลับหน้าแรก</a>
+</div>
 
 </div>
 
