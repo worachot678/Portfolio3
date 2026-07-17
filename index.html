@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Portfolio | นายวรโชติ เจริญจิตร</title>
 
 <style>
@@ -16,117 +15,192 @@
 }
 
 body{
-    background:linear-gradient(135deg,#0f172a,#1d4ed8,#38bdf8);
-    color:white;
+    overflow:hidden;
+    background:linear-gradient(135deg,#d8f3dc,#b7e4c7,#95d5b2,#74c69d);
+}
+
+/* วงกลมลอย */
+.circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.3);
+    animation:float 15s linear infinite;
+}
+
+.circle:nth-child(1){
+    width:220px;
+    height:220px;
+    left:5%;
+    top:80%;
+    animation-duration:20s;
+}
+
+.circle:nth-child(2){
+    width:150px;
+    height:150px;
+    right:10%;
+    top:90%;
+    animation-duration:18s;
+}
+
+.circle:nth-child(3){
+    width:280px;
+    height:280px;
+    left:75%;
+    top:75%;
+    animation-duration:25s;
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+    }
 }
 
 /* เมนู */
+
 header{
     position:fixed;
-    top:0;
-    left:0;
     width:100%;
+    top:0;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 10%;
-    background:rgba(0,0,0,.25);
-    backdrop-filter:blur(10px);
-    z-index:1000;
+    padding:20px 8%;
+    background:rgba(255,255,255,.2);
+    backdrop-filter:blur(15px);
 }
 
 .logo{
     font-size:30px;
     font-weight:bold;
+    color:#1b4332;
 }
 
 nav a{
-    color:white;
+    color:#1b4332;
     text-decoration:none;
     margin-left:20px;
-    font-size:18px;
+    font-weight:bold;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#7dd3fc;
+    color:#2d6a4f;
 }
 
-/* หน้าแรก */
+/* กล่องหลัก */
+
 .hero{
     height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+}
+
+.card{
+    width:420px;
+    padding:40px;
     text-align:center;
-    padding:20px;
+    background:rgba(255,255,255,.25);
+    backdrop-filter:blur(20px);
+    border-radius:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    animation:show 1.5s;
 }
 
-.hero img{
-    width:220px;
-    height:220px;
+@keyframes show{
+
+from{
+opacity:0;
+transform:translateY(50px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.card img{
+    width:180px;
+    height:180px;
     border-radius:50%;
-    border:6px solid white;
     object-fit:cover;
-    box-shadow:0 0 30px #38bdf8;
-    animation:float 3s ease-in-out infinite;
+    border:6px solid white;
+    animation:updown 3s ease-in-out infinite;
 }
 
-.hero h1{
-    margin-top:25px;
-    font-size:50px;
+@keyframes updown{
+
+0%{
+transform:translateY(0);
 }
 
-.hero h2{
-    color:#dbeafe;
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+.card h1{
+    color:#1b4332;
+    margin-top:20px;
+    font-size:38px;
+}
+
+.card h3{
+    color:#2d6a4f;
     margin-top:10px;
 }
 
-.hero p{
+.card p{
+    color:#344e41;
     margin-top:20px;
-    font-size:20px;
     line-height:1.8;
 }
 
-/* ปุ่ม */
 .buttons{
-    margin-top:35px;
+    margin-top:30px;
 }
 
 .btn{
     display:inline-block;
-    margin:10px;
-    padding:15px 35px;
-    background:#38bdf8;
+    margin:8px;
+    padding:13px 28px;
+    background:#52b788;
     color:white;
     text-decoration:none;
-    border-radius:50px;
-    font-size:18px;
+    border-radius:40px;
     transition:.3s;
 }
 
 .btn:hover{
-    background:white;
-    color:#1d4ed8;
-    transform:translateY(-5px);
+    background:#40916c;
+    transform:scale(1.08);
 }
 
-/* Footer */
 footer{
-    background:#111827;
+    position:absolute;
+    bottom:15px;
+    width:100%;
     text-align:center;
-    padding:20px;
+    color:#2d6a4f;
 }
 
-/* Animation */
-@keyframes float{
-0%{transform:translateY(0);}
-50%{transform:translateY(-12px);}
-100%{transform:translateY(0);}
-}
-
-/* Responsive */
 @media(max-width:768px){
+
+.card{
+    width:90%;
+}
 
 header{
     flex-direction:column;
@@ -134,20 +208,6 @@ header{
 
 nav{
     margin-top:15px;
-}
-
-nav a{
-    display:inline-block;
-    margin:8px;
-}
-
-.hero h1{
-    font-size:36px;
-}
-
-.hero img{
-    width:170px;
-    height:170px;
 }
 
 }
@@ -158,10 +218,14 @@ nav a{
 
 <body>
 
+<div class="circle"></div>
+<div class="circle"></div>
+<div class="circle"></div>
+
 <header>
 
 <div class="logo">
-My Portfolio
+🌿 My Portfolio
 </div>
 
 <nav>
@@ -182,17 +246,17 @@ My Portfolio
 
 <section class="hero">
 
-<div>
+<div class="card">
 
-<img src="images/profile.jpg" alt="Profile">
+<img src="images/profile.jpg" alt="profile">
 
 <h1>นายวรโชติ เจริญจิตร</h1>
 
-<h2>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h2>
+<h3>นักเรียนชั้นมัธยมศึกษาปีที่ 6</h3>
 
 <p>
 ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของผม<br>
-เว็บไซต์นี้จัดทำขึ้นเพื่อนำเสนอประวัติส่วนตัว ผลงาน และทักษะต่าง ๆ
+รวบรวมประวัติ ผลงาน ทักษะ และข้อมูลการติดต่อ
 </p>
 
 <div class="buttons">
@@ -212,9 +276,7 @@ My Portfolio
 </section>
 
 <footer>
-
 © 2026 Portfolio | นายวรโชติ เจริญจิตร
-
 </footer>
 
 </body>
